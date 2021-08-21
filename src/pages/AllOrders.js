@@ -15,15 +15,17 @@ const AllOrders = () => {
   }, []);
 
   return (
-    <div className="d-flex container">
+    <div className="container">
       <h3> ALL ORDERS </h3>
-      <div className="">
-        <Sidebar />
-      </div>
-      <div className="">
-        {allOrders.map((order) => (
-          <AllOrdersCard {...order} />
-        ))}
+      <div className="d-flex">
+        <div className=" ">
+          <Sidebar />
+        </div>
+        <div className="">
+          {allOrders.map((order) => (
+            <AllOrdersCard {...order} />
+          ))}
+        </div>
       </div>
     </div>
   );

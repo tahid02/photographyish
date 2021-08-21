@@ -24,17 +24,17 @@ const Sidebar = () => {
             <div>Manage Services </div>
           </Link>
           <Link to="/" className="link ">
-            <div>Home</div>
+            <div style={{ fontSize: "20px" }}>HOME</div>
           </Link>
         </div>
       ) : (
         <div>
           <Link to="/userOrders" className="link">
-            <div>User Orders </div>
+            <div>Orders </div>
           </Link>
 
           <Link to="/" className="link ">
-            <div>Home</div>
+            <div>HOME</div>
           </Link>
         </div>
       )}

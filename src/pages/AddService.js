@@ -57,7 +57,7 @@ const AddServices = () => {
 
   return (
     <section className="container-fluid">
-      <h3> ADD SERVICE </h3>
+      <h2> ADD SERVICE </h2>
       <div className="d-flex">
         <div className="">
           <Sidebar />

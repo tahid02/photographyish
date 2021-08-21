@@ -8,7 +8,7 @@ const NavigationBar = () => {
   const history = useHistory();
   console.log({ login });
   const handleOrder = () => {
-    if (login.isAdmin) {
+    if (login?.isAdmin) {
       history.push("/allOrders");
     } else {
       history.push("/userOrders");
@@ -38,11 +38,11 @@ const NavigationBar = () => {
           <Nav.Link href="#" className="centerItem">
             <button onClick={handleOrder}>Orders</button>
           </Nav.Link>
-          <Nav.Link href="#" className="centerItem">
+          {/* <Nav.Link href="#" className="centerItem">
             <Link to="/logIn" className="nav-link active ">
               LogIn
             </Link>
-          </Nav.Link>
+          </Nav.Link> */}
 
           {login.isAdmin && (
             <Nav.Link>
@@ -52,7 +52,7 @@ const NavigationBar = () => {
             </Nav.Link>
           )}
 
-          <Nav.Link>
+          <Nav.Link href="#" className="centerItem">
             <Link to="/login">
               <button className="nav-link btn btn-success active centerItem">
                 Log in

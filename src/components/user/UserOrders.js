@@ -24,6 +24,7 @@ const UserOrders = () => {
           <Sidebar />
         </div>
         <div className="">
+          {!userOrders.length && <p>you didn't order any service </p>}
           {userOrders.map((order) => (
             <UserOrdersCard {...order} />
           ))}

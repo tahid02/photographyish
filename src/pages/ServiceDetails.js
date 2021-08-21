@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import NavigationBar from "../components/home/navigationbar/NavigationBar";
 
 const ServiceDetails = () => {
@@ -20,7 +20,31 @@ const ServiceDetails = () => {
       <div>
         <NavigationBar />
       </div>
-      <div>{serviceDetail.service_price}</div>
+      <div>
+        <div className="img-fluid">
+          <img src={serviceDetail.service_image} alt="" />
+        </div>
+        <div className="">
+          <strong> Service Name: {serviceDetail.service_name} </strong>
+        </div>
+        <div className="">
+          <strong> Service price : ${serviceDetail.service_price} </strong>
+        </div>
+        <div className="">
+          <strong>Service Description :</strong>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          nobis vero earum sequi quas, est eos recusandae praesentium inventore
+          fuga adipisci dolores minima aperiam qui illo quae laborum in beatae.
+          nobis vero earum sequi quas, est eos recusandae praesentium inventore
+          fuga adipisci dolores minima aperiam qui illo quae laborum in beatae.
+        </div>
+      </div>
+
+      <div className="d-flex justify-content-center">
+        <Link to={`/checkOut/${id}`}>
+          <button className="btn btn-success"> checkOut </button>
+        </Link>
+      </div>
     </div>
   );
 };

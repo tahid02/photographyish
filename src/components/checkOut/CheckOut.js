@@ -102,7 +102,7 @@ const CheckOut = () => {
               {/* {errors.address && <p className="errorMsg"> address is required </p>} */}
             </div>
 
-            <button type="submit" className="btn sign-in mt-3">
+            <button type="submit" className="btn btn-success sign-in mt-3">
               Order
             </button>
           </form>
